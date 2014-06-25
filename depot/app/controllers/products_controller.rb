@@ -26,6 +26,11 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
+    uploaded_io = params[:product][:image_file]
+    File.open(Rails.root.join('app', 'assets', 'images', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
@@ -56,7 +61,7 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
-      format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
+      format.html { redirect_to @products, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
