@@ -26,12 +26,13 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
-    uploaded_io = params[:product][:image_file]
-    File.open(Rails.root.join('app', 'assets', 'images', uploaded_io.original_filename), 'wb') do |file|
-      file.write(uploaded_io.read)
+    if params[:product][:image_file].present?
+      uploaded_io = params[:product][:image_file]
+      File.open(Rails.root.join('app', 'assets', 'images', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
+      @product.image_url = uploaded_io.original_filename
     end
-
-    @product.image_url = uploaded_io.original_filename
 
     respond_to do |format|
       if @product.save
