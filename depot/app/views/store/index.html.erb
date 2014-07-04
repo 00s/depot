@@ -2,7 +2,7 @@
 	<p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Seu Catálogo Pragmático</h1>
+<h1>YOUR PRAGMATIC BOOKSHELF</h1>
 <% cache ['store', Product.latest] do %>
 	<% @products.each do |product| %>
 		<% cache ['entry', product] do %>

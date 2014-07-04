@@ -5,29 +5,44 @@
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>
+		<link rel="stylesheet" href="css/bootstrap-responsive.css">
+		<link rel="stylesheet" href="css/bootstrap.css">
 	</head>
-
+		
 	<body class='<%= controller.controller_name %>'>
+ 
+		<div id="all">	
 
-	<div id=all>
-		<div id="banner">
-			<%= image_tag("logo.png") %>
-			<%= @page_title || "Estante Pragmática" %>
-		</div>
+			<div id="head">
+					<%= @page_title || "PRAGMATIC BOOKSHELF" %>
+			</div>
+				
 
-		<nav id="menu">
-			<ul>
-				<li><a href="http://www....">Início</a></li>
-				<li><a href="http://www..../faq">Perguntas</a></li>
-				<li><a href="http://www..../news">Notícias</a></li>
-				<li><a href="http://www..../contact">Contato</a></li>
-			</ul>
-		</nav>
-
-		<div id="main">
-			<%= yield %>
+			<nav id="dl-menu" class="dl-menuwrapper">
+				<button class="dl-trigger">Menu</button>
+				<ul class="dl-menu">
+					<li><a href="http://www...." >Home</a></li>
+					<li><a href="http://www..../faq">Questions</a>
+						<%-# in case of a submenu-%>
+						<% if false %>
+							<ul class="dl-submenu">
+								<li><a></a></li>
+							</ul>
+						<% end %>
+					
+					</li>
+					<li><a href="http://www..../news">News</a></li>
+					<li><a href="http://www..../contact">Contact</a></li>
+				</ul>
+			
+			</nav>
+			
+			<div id="main">
+				<%= yield %>
+		
+			</div>
 		</div>
-		</div>
+	
 	</body>
 
 </html>
