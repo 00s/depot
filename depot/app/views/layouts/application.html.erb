@@ -2,31 +2,40 @@
 <html>
 	<head>
 	  <title>Depot</title>
+
+	  <!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" />
+
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	  <%= csrf_meta_tags %>
+	  <%= csrf_meta_tags %>		
 	</head>
 
-	<body class='<%= controller.controller_name %>'>
+	<body class="<%= controller.controller_name %>">
 
-	<div id=all>
-		<div id="banner">
-			<%= image_tag("logo.png") %>
-			<%= @page_title || "Estante Pragmática" %>
-		</div>
+		<div id="all">
+			<div class="page-header">
+				<%= image_tag("topguntocat3.jpg", :class => "img-circle") %>
+				 <h1><%= @page_title || "Topbooks" %>
+				 <small>git commit -m "it's getting better"</small></h1> 
+			</div>
 
-		<nav id="menu">
-			<ul>
-				<li><a href="http://www....">Início</a></li>
-				<li><a href="http://www..../faq">Perguntas</a></li>
-				<li><a href="http://www..../news">Notícias</a></li>
-				<li><a href="http://www..../contact">Contato</a></li>
-			</ul>
-		</nav>
+			<nav id="menu">
+				<ul class="nav nav-tabs" role="tablist">
+					<li><a href="http://www....">Home</a></li>
+					<li><a href="http://www..../Cart">Cart</a></li>
+					<li><a href="http://www..../news">News</a></li>
+					<li><a href="http://www..../Products">Products</a></li>
+				</ul>
+			</nav>
 
-		<div id="main">
-			<%= yield %>
-		</div>
+			<div id="main">
+				<%= yield %>
+			</div>
+
 		</div>
 	</body>
 
