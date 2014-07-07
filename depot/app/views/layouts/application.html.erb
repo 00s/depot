@@ -1,48 +1,72 @@
 <!DOCTYPE html>
 <html>
-	<head>
-	  <title>Depot</title>
-	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-	  <%= csrf_meta_tags %>
-		<link rel="stylesheet" href="css/bootstrap-responsive.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-	</head>
-		
-	<body class='<%= controller.controller_name %>'>
+  <head>
+    <title>Depot</title>
+      
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+         
+      <!-- Latest compiled and minified  bootsrap CSS-->
+      <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+      <!-- responsive menu styling -->
+     
+      <!-- jquery plugin call. (main importance to function) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
+      
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"/>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
+      
+  </head>
+        
+  <body class='<%= controller.controller_name %>'>
  
-		<div id="all">	
+    <div class="all"> 
+            
+      <nav class="top">
+          
+          <div id="dl-menu" class="dl-menuwrapper">
+            <button class="dl-trigger">Menu</button>
+              <ul class="dl-menu">
+                  <li>
+                      <a href="#">Home</a>
+                        <!-- primeiro nível de submenu -->
+                        <ul class="dl-submenu">
+                          <li>
+                            <a href="#">Submenu</a>
+                              <!-- segundo nível de submenu -->
+                              <ul class="dl-submenu">
+                                <li><a href="#">Sub-submenu</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">outro item</a></li>
+                        </ul>
+                    </li>
+                    <!-- de volta ao primeiro nível -->
+                    <li><a href="#">Questions</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Contact</a></li>
+               </ul>
+          </div><!-- /dl-menuwrapper -->
+                        
+        <div class="page_title">
+          <h1><%= @page_title || "PRAGMATIC BOOKSHELF" %></h1>
+        </div>
 
-			<div id="head">
-					<%= @page_title || "PRAGMATIC BOOKSHELF" %>
-			</div>
-				
+        <h2><%=link_to 'CART', carts_path %></h2>
+         
+                            
+      </nav>
+                
+      <div id="main">
+        <%= yield %>
+      </div>
 
-			<nav id="dl-menu" class="dl-menuwrapper">
-				<button class="dl-trigger">Menu</button>
-				<ul class="dl-menu">
-					<li><a href="http://www...." >Home</a></li>
-					<li><a href="http://www..../faq">Questions</a>
-						<%-# in case of a submenu-%>
-						<% if false %>
-							<ul class="dl-submenu">
-								<li><a></a></li>
-							</ul>
-						<% end %>
-					
-					</li>
-					<li><a href="http://www..../news">News</a></li>
-					<li><a href="http://www..../contact">Contact</a></li>
-				</ul>
-			
-			</nav>
-			
-			<div id="main">
-				<%= yield %>
-		
-			</div>
-		</div>
-	
-	</body>
+    </div>
+    
+  </body>
 
 </html>
