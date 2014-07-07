@@ -2,33 +2,31 @@
 <html>
 	<head>
 	  <title>Depot</title>
-
-	  <!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" />
-
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		
 	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	  <%= csrf_meta_tags %>		
 	</head>
 
 	<body class="<%= controller.controller_name %>">
 
 		<div id="all">
-			<div class="page-header">
-				<%= image_tag("topguntocat3.jpg", :class => "img-circle") %>
-				 <h1><%= @page_title || "Topbooks" %>
-				 <small>git commit -m "it's getting better"</small></h1> 
+			
+			<div class="header">
+					
+				 	<h1 id="maintitle"><%= @page_title || "yet another bookshelf" %></br>
+				 	<small>git commit -m "it's getting better"</small></h1> 
+
 			</div>
 
 			<nav id="menu">
-				<ul class="nav nav-tabs" role="tablist">
+				<ul>
 					<li><a href="http://www....">Home</a></li>
 					<li><a href="http://www..../Cart">Cart</a></li>
 					<li><a href="http://www..../news">News</a></li>
-					<li><a href="http://www..../Products">Products</a></li>
+					<li><a href="http://www..../products">Products</a></li>
 				</ul>
 			</nav>
 
