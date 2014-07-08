@@ -1,5 +1,6 @@
 @font-face {
 	font-family: 'icomoon';
+<<<<<<< HEAD
 	src:url('../fonts/icomoon.eot');
 	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/icomoon.woff') format('woff'),
@@ -11,6 +12,11 @@
 
 /* Common styles of menus */
 
+
+a {
+	text-decoration: none !important;
+
+}
 .dl-menuwrapper {
 	width: 100%;
 	max-width: 300px;
@@ -24,6 +30,11 @@
 
 .dl-menuwrapper:first-child {
 	margin-right: 10px;
+	z-index: 999;
+}
+
+.dl-menuwrapper:first-child {
+	margin-right: 100px;
 }
 
 .dl-menuwrapper button {
@@ -45,7 +56,7 @@
 }
 
 .dl-menuwrapper button:after {
-	content: '';
+	content: '»';
 	position: absolute;
 	width: 68%;
 	height: 5px;
@@ -762,7 +773,11 @@ All this is done for any sub-level being entered.
 }
 
 .no-js .dl-menuwrapper li > a:not(:only-child):after {
+<<<<<<< HEAD
 	content: '';
+=======
+	content: '»';
+>>>>>>> bc061ab367e8cb3fde6b921c0db2d0048ffe2a34
 }
 
 /* Colors for demos */

@@ -12,4 +12,10 @@
 //
 //= require jquery
 //= require turbolinks
+//= require responsive_menu/modernizr.custom
+//= require responsive_menu/jquery.dlmenu
+//= require functions
 //= require_tree .
+
+
+
