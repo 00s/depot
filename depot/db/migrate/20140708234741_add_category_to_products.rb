@@ -1,6 +1,6 @@
 class AddCategoryToProducts < ActiveRecord::Migration
   def up
-    add_column :products, :category, :string , default: "others"
+    add_column :products, :category, :string 
   end
 
   def down

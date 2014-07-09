@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 20140708234741) do
     t.decimal  "price",       precision: 8, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "category",                            default: "others"
+    t.string   "category"
   end
 
 end
