@@ -138,7 +138,7 @@ a {
 }
 
 .dl-menuwrapper .dl-menu.dl-menuopen {
-	opacity: 0.7;
+	opacity: 1;
 	pointer-events: auto;
 	-webkit-transform: translateY(0px);
 	transform: translateY(0px);

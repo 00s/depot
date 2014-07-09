@@ -10,6 +10,7 @@ class ProductTest < ActiveSupport::TestCase
     assert product.errors[:description].any?
     assert product.errors[:price].any?
     assert product.errors[:image_url].any?
+    assert product.errors[:category].any?
   end
 
   test "product price must be positive" do
@@ -72,6 +73,12 @@ class ProductTest < ActiveSupport::TestCase
                                 
     product.title = "Product title is valid" 
     assert product.valid?
+  end
+
+  test "product must have a category (default = others)" do
+    if product.(:category) => nil do
+      product.(:category) = "others"
+    end
   end
 
 end

@@ -8,6 +8,7 @@ class ProductsControllerTest < ActionController::TestCase
       description: 'Wibbles are fun!',
       image_url: 'lorem.jpg',
       price: 19.95
+      category: 'books'
     }
   end
 
@@ -33,11 +34,13 @@ class ProductsControllerTest < ActionController::TestCase
   test "should show product" do
     get :show, id: @product
     assert_response :success
+    assert_select '#main .entry', 5
   end
 
   test "should get edit" do
     get :edit, id: @product
     assert_response :success
+    assert_redirected_to products_form
   end
 
   test "should update product" do
