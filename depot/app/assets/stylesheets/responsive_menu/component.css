@@ -1,6 +1,5 @@
 @font-face {
 	font-family: 'icomoon';
-<<<<<<< HEAD
 	src:url('../fonts/icomoon.eot');
 	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/icomoon.woff') format('woff'),
@@ -19,8 +18,8 @@ a {
 }
 .dl-menuwrapper {
 	width: 100%;
-	max-width: 300px;
-	float: left;
+	max-width: 180px;
+	/*float: left;*/
 	position: relative;
 	-webkit-perspective: 1000px;
 	perspective: 1000px;
