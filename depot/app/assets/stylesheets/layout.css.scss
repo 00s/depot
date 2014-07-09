@@ -1,9 +1,49 @@
+body {
+  
+  margin: 0 auto;
 
-#all{
+	.all{
+		background-color: #FFFCFC;
 
-	padding: 50px;
+		header{
+
+			.cart{
+				float: left;
+			}
+
+			background: #a63437 no-repeat fixed center 0;
+			height: 90px;
+			position: relative;
+			top: 0;
+			width: 100%;
+
+
+			h1#main-title{
+				margin: 0;
+				font-size: 55px;
+				padding-top: 10px;
+				color: white;
+				text-align: center;
+
+				small{
+					font-size: 15px;
+				}
+			}
+		}
 	
-	div .page-header{
-		align: center;
-	}	
+		#options{
+
+			nav#dl-menu{
+				padding-top: 15px;
+				padding-left: 15px;
+			}
+		}
+	
+		#main {
+
+			margin-left: auto;
+    	margin-right: auto;
+			width: 70%;
+		}	
+	}
 }

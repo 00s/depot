@@ -25,42 +25,30 @@
   <body class='<%= controller.controller_name %>'>
  
     <div class="all"> 
-            
-      <nav class="top">
-          
-          <div id="dl-menu" class="dl-menuwrapper">
-            <button class="dl-trigger">Menu</button>
-              <ul class="dl-menu">
-                  <li>
-                      <a href="#">Home</a>
-                        <!-- primeiro nível de submenu -->
-                        <ul class="dl-submenu">
-                          <li>
-                            <a href="#">Submenu</a>
-                              <!-- segundo nível de submenu -->
-                              <ul class="dl-submenu">
-                                <li><a href="#">Sub-submenu</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="#">outro item</a></li>
-                        </ul>
-                    </li>
-                    <!-- de volta ao primeiro nível -->
-                    <li><a href="#">Questions</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
-               </ul>
-          </div><!-- /dl-menuwrapper -->
-                        
-        <div class="page_title">
-          <h1><%= @page_title || "PRAGMATIC BOOKSHELF" %></h1>
+      <header class="top">
+        <!-- cart -->
+        <div class="right">
+          <%=link_to(image_tag("cart.png", :size => "75x75"), carts_path, :class => "cart") %>
         </div>
-
-        <h2><%=link_to(image_tag("cart.png", :size => "50x50"), carts_path) %></h2>
-         
-                            
-      </nav>
-                
+        <!-- main title -->      
+        <h1 id="main-title"><%= @page_title || "boekenwinkel" %></h1>
+          
+      </header>
+        
+      <div id="options">
+        <!-- /dl-menuwrapper -->
+        <nav id="dl-menu" class="dl-menuwrapper">
+          <button class="dl-trigger">Menu</button>
+            <ul class="dl-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Contact</a></li>
+             </ul>
+        </nav>
+        
+      </div>        
+      
       <div id="main">
         <%= yield %>
       </div>
