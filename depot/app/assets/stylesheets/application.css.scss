@@ -30,7 +30,8 @@ body {
 	  .top {
 		  width: 100%;
 		  display: inline-block;
-		 
+
+				 
 		  .dl-menu.dl-animate-out-1 {
 	        animation: MenuAnimOut1 0.4s linear forwards;
 		  }
@@ -81,11 +82,11 @@ body {
 			  vertical-align: middle;
 			  margin-right: 5%;
 			  margin-left: 5%;
-			 font-size: 20px;
+			  font-size: 20px;
 		  }
  
 		  .cart {
-			  float: right;
+			  float: left;
 			  width: 20%;
 			  height: 100%;
 		  }
