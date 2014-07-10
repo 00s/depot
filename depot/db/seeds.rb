@@ -8,38 +8,39 @@
 #---
 # encoding: utf-8
 Product.delete_all
-Product.create!(title: 'CoffeeScript',
+Product.create!(title: 'Antologia Front-End',
   description: 
     %{<p>
-        CoffeeScript is JavaScript done right. It provides all of JavaScript's
-	functionality wrapped in a cleaner, more succinct syntax. In the first
-	book on this exciting new language, CoffeeScript guru Trevor Burnham
-	shows you how to hold onto all the power and flexibility of JavaScript
-	while writing clearer, cleaner, and safer code.
+        Esse livro quer ser uma pequena celebração desse sucesso.
+         Um grupo de 11 autores de renome nacional na comunidade se 
+         juntou para escrever artigos que julgamos relevantes para a Web. 
+         Os capítulos são independentes, cada um com seu autor. A única regra era: 
+         escrever algo memorável, que fizesse a diferença na Web brasileira.
       </p>},
-  image_url:   'cs.jpg',    
+  image_url:   'Antologia-ebook_capa.png',    
   price: 36.00)
 # . . .
-Product.create!(title: 'Programming Ruby 1.9 & 2.0',
+Product.create!(title: 'DevOps 3 na Pratica',
   description:
     %{<p>
-        Ruby is the fastest growing and most exciting dynamic language
-        out there. If you need to get working programs delivered fast,
-        you should add Ruby to your toolbox.
+        DevOps é um movimento cultural e profissional que está tentando quebrar essas barreiras. 
+        Com o foco em automação, colaboração, compartilhamento de ferramentas e de conhecimento, 
+        DevOps está mostrando que desenvolvedores e engenheiros de sistema têm muito o que 
+        aprender uns com os outros.
       </p>},
-  image_url: 'ruby.jpg',
+  image_url: 'DevOps-3_capa.png',
   price: 49.95)
 # . . .
 
-Product.create!(title: 'Rails Test Prescriptions',
+Product.create!(title: 'Rails Test-Driven Development',
   description: 
     %{<p>
-        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
-        Rails applications, covering Test-Driven Development from both a
-        theoretical perspective (why to test) and from a practical perspective
-        (how to test effectively). It covers the core Rails testing tools and
-        procedures for Rails 2 and Rails 3, and introduces popular add-ons,
-        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
+        <em>Rails Test-Driven Development Prescriptions</em> 
+        Neste livro, você aprenderá sobre TDD, uma das práticas ágeis de desenvolvimento de 
+        software mais populares. TDD faz o desenvolvedor escrever o teste antes mesmo de 
+        implementar o código. Essa simples inversão na maneira de se trabalhar faz com o 
+        que o desenvolvedor escreva código mais testado, com menos bugs, e inclusive 
+        com mais qualidade. Seja profissional, teste seu software!
       </p>},
-  image_url: 'rtp.jpg',
+  image_url: 'tdd-ruby-ebook_capa.png',
   price: 34.95)
