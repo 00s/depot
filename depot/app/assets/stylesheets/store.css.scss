@@ -8,6 +8,7 @@
 	}
 
 	.entry{
+		min-height: 150px;
 		background-color: white;
 		overflow: auto;
 		margin-top: 1em;
@@ -20,8 +21,7 @@
 		min-height: 110px;
 
 		img{
-			width: 80px;
-			height: 90px;
+			width: 90px;
 			margin-right: 5px;
 			margin-bottom: 5px;
 			position: absolute;
