@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require turbolinks
+//= require bootstrap/bootstrap.min
 //= require responsive_menu/modernizr.custom
 //= require responsive_menu/jquery.dlmenu
 //= require functions

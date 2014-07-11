@@ -106,7 +106,7 @@ a {
 	font-family: 'icomoon';
 	speak: none;
 	-webkit-font-smoothing: antialiased;
-	content: "\e000";
+	content: "»";
 }
 
 .dl-menuwrapper li.dl-back:after {
@@ -772,11 +772,7 @@ All this is done for any sub-level being entered.
 }
 
 .no-js .dl-menuwrapper li > a:not(:only-child):after {
-<<<<<<< HEAD
-	content: '';
-=======
 	content: '»';
->>>>>>> bc061ab367e8cb3fde6b921c0db2d0048ffe2a34
 }
 
 /* Colors for demos */

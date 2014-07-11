@@ -12,28 +12,33 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :titulo%><br>
+    <%= f.label :name%><br>
     <%= f.text_field :title %>
   </div>
   
   <div class="field">
-    <%= f.label :descrição %><br>
+    <%= f.label :description %><br>
     <%= f.text_area :description, rows: 6 %>
   </div>
   
   <div class="field">
-      <%= f.label :imagem %><br>
+      <%= f.label :image %><br>
       <%= f.file_field :image_file %>
       <%= f.hidden_field :image_url, :value => :image_url %>
 
   </div>
 
   <div class="field">
-    <%= f.label :preço %><br>
+    <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
-  
+
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.text_field :category %>
+  </div>
+
   <div class="actions">
-   <%= f.submit "Adicionar Produto" %>
+   <br><%= f.submit "Add" %>
   </div>
 <% end %>
