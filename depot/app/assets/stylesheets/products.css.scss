@@ -4,13 +4,14 @@ h1{
 }
 
 #products-holder {
-  /* Displays all elements spaced evenly and wrapps the self content in a flexible way*/
-  display: flex;
-  flex-flow: row-wrap;
-  align-content: space-between;
-
+    /* Displays all elements spaced evenly and wrapps the self content in a flexible way*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row-wrap; 
+    align-content: space-between;
   .list-line-holder{
-    margin-right: 5%;
+    margin-right: 1%;
+    margin-bottom: 2%;
     /* Pseudo-selectors for removing the margin-right
     from every 3n+3 element */
     :nth-child(5n+5) { margin-right: 0;}
