@@ -1,12 +1,5 @@
-#---
-# Excerpted from "Agile Web Development with Rails",
-# published by The Pragmatic Bookshelf.
-# Copyrights apply to this code. It may not be used to create training material, 
-# courses, books, articles, and the like. Contact us if you are in doubt.
-# We make no guarantees that this code is fit for any purpose. 
-# Visit http://www.pragmaticprogrammer.com/titles/rails4 for more book information.
-#---
 # encoding: utf-8
+
 Product.delete_all
 Product.create!(title: 'Antologia Front-End',
   description: 
@@ -35,7 +28,7 @@ Product.create!(title: 'DevOps 3 na Pratica',
 Product.create!(title: 'Rails Test-Driven Development',
   description: 
     %{<p>
-        <em>Rails Test-Driven Development Prescriptions</em> 
+        Rails Test-Driven Development Prescriptions
         Neste livro, você aprenderá sobre TDD, uma das práticas ágeis de desenvolvimento de 
         software mais populares. TDD faz o desenvolvedor escrever o teste antes mesmo de 
         implementar o código. Essa simples inversão na maneira de se trabalhar faz com o 
