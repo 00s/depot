@@ -6,6 +6,7 @@ class StoreControllerTest < ActionController::TestCase
     assert_response :success
 		assert_select '#main .entry', 3
 		assert_select 'h3', 'Programming Ruby 1.9'
-		#assert_select '.price', /\R\$[,\d]+\.\d\d/
+		assert_select '.price', /R\$ [.\d]+\,\d\d/
+
 	end
 end
