@@ -8,7 +8,6 @@ class ProductsControllerTest < ActionController::TestCase
       description: 'Wibbles are fun!',
       image_url: 'lorem.jpg',
       price: 19.95
-      category: 'books'
     }
   end
 
@@ -19,13 +18,13 @@ class ProductsControllerTest < ActionController::TestCase
     # tests if there are at least four links in the menu
     assert_select '#dl-menu a', minimum: 4
     # tests if there is a link to cart
-    assert_select '.right, <%=link_to carts_path %>'
+    assert_select '.right, link_to carts_path'
     # tests if there are at least 5 list-line-holder class elements (books) in the main area
-    assert_select '#main .list-line-holder', minimum: 5
+    assert_select '.list-line-holder', minimum: 7
     # tests if there is a "title" to the products page and if its content is BOENKEN
     assert_select 'h1', 'BOEKEN'
     # tests if there are an image div and two buttons in an entry (book)
-    assert_select '.list-line-holder',.image-holder, .btn btn-primary btn-xs, .btn btn-danger btn-xs 
+    assert_select '.list-line-holder', '.image-holder', '.btn btn-primary btn-xs', '.btn btn-danger btn-xs' 
     # tests if there is a button (new product) in the main area
     assert_select '#main .btn btn-info'
   end
@@ -46,13 +45,11 @@ class ProductsControllerTest < ActionController::TestCase
   test "should show product" do
     get :show, id: @product
     assert_response :success
-    assert_select '#main .entry', 5
   end
 
   test "should get edit" do
     get :edit, id: @product
     assert_response :success
-    assert_redirected_to products_form
   end
 
   test "should update product" do
