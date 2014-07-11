@@ -1,49 +1,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.products {
-  
-  table {
-	  border-collapse: collapse;
-  }
-
-  table tr td {
-	  padding: 5px;
-  }
-
-  .list_image {
-    width: 60px;
-    height: 70px;
-  }
-
-  .list_description {
-  	width: 100%;
-  	
-  	dl {
-  		margin: 0;
-  	}
-
-  	dt {
-  		color: 			#244;
-  		font-weight: 	bold;
-  		font-size: 		larger;
-  	}
-
-  	dd {
-  		margin: 0;
-  	}
-  }
-
-  .list_actions {		
-	  text-align: 	right;
-  }
-
-  .list_line_even {
-    background: #e0f8f8;
-  }
-
-  .list_line_odd {
-  	  background: #EDEDED;
-  }
-
-
+h1{
+  text-align: center;
 }
+
+#products-holder {
+  display: flex;
+  flex-flow: row-wrap;
+  align-content: space-between;
+
+  .list-line-holder{
+    margin-right: 5%;
+    /* Pseudo-selectors for removing the margin-right
+    from every 3n+3 element */
+    :nth-child(4n+4) { margin-right: 0;}
+   
+    .image-holder {
+      -webkit-box-shadow: 0px 0px 11px 1px rgba(50, 50, 50, 0.53);
+      -moz-box-shadow:    0px 0px 11px 1px rgba(50, 50, 50, 0.53);
+      box-shadow:         0px 0px 11px 1px rgba(50, 50, 50, 0.53);
+    }
+    
+    .list-actions{
+      padding-top: 5%;
+      text-align: center;
+    }
+  }
+}
+
