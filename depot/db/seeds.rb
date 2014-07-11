@@ -44,3 +44,53 @@ Product.create!(title: 'Rails Test-Driven Development',
       </p>},
   image_url: 'tdd-ruby-ebook_capa.png',
   price: 34.95)
+
+Product.create!(title: 'Google Android',
+  description: 
+    %{<p>
+        Faça as melhores aplicações Android, com as melhores práticas da área. 
+        Aprenda como publicar a aplicação e tê-la no ar em 1 dia. Saiba como utilizar 
+        o máximo dos aparelhos e crie aplicações extremamente ricas para celulares e tablets!
+      </p>},
+  image_url: 'Android-280_capa.png',
+  price: 34.95)
+
+Product.create!(title: 'O Programador Apaixonado',
+  description: 
+    %{<p>
+        Para ter sucesso no mercado de TI atual, é preciso ver sua carreira como se fosse um negócio. 
+        Nesse livro você vai aprender a empreender com a sua carreira e levá-la para o caminho que você 
+        escolheu. O do sucesso.  Chad Fowler, famoso desenvolvedor de software e autor de diversos livros, 
+        ensina a construir sua carreira na área de desenvolvimento, passo a passo, seguindo o mesmo 
+        caminho de que se você estivesse criando e vendendo um produto. Afinal de contas, suas habilidades são um produto.
+      </p>},
+  image_url: 'Passionate-Programmer-ebook_capa.png',
+  price: 34.95)
+
+Product.create!(title: 'Java 8 Prático',
+  description: 
+    %{<p>
+        Quase 20 anos após sua primeira versão, um novo Java surge com novidades importantes. 
+        Entre os principais recursos, a linguagem recebe default methods, method references e lambdas. 
+        São conceitos simples mas que trazem importantes possibilidades. Durante o livro exploraremos 
+        esses e outros avanços. Sempre com exemplos práticos e apresentando onde utilizá-los, migrando 
+        o código legado do dia a dia para o novo paradigma funcional do Java 8.  Com esse tripé de conceitos, 
+        a API conseguiu evoluir de uma maneira interessante. Os pacotes java.util.stream e java.util.function 
+        serão explorados com profundidade, apresentando formas sucintas para trabalhar com coleções e outros 
+        tipos de dados. Streams e Collectors farão parte da sua rotina e serão tão essenciais nas suas 
+        aplicações quanto já são as Collections e o java.io.
+      </p>},
+  image_url: 'Java8-ebook_capa.png',
+  price: 34.95)
+
+Product.create!(title: 'Play Framework',
+  description: 
+    %{<p>
+        Nesse livro, Fernando Boaglio ensina como criar uma aplicação do começo ao fim utilizando 
+          o Play Framework na versão Java, passando por situações comuns do dia a dia, indo desde 
+          o tradicional cadastro, até funcionalidades mais avançadas como habilitação de HTTPS, 
+          login integrado com redes sociais e integração com serviços REST. Você vai aprender como 
+          o Play Framework pode te tornar extremamente produtivo.
+      </p>},
+  image_url: 'Play-ebooks_capa.png',
+  price: 34.95)
