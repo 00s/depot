@@ -1,0 +1,25 @@
+<p id="notice">
+	<%= notice %>
+</p>
+
+<div id="title">
+  <h2><%= @product.title %><h2>
+</div>
+
+<div>
+	<%=image_tag(@product.image_url)%>
+</div>
+
+<div id="desrciption">
+  <%= @product.description %>
+</div>
+
+<p>
+	<strong>Category: </strong><%= @product.category %>
+</p>
+
+  
+<strong><%= number_to_currency(@product.price) %></strong>
+
+<%= button_to 'Add to cart', line_items_path(product_id: product), :class => "btn btn-success btn-sm" %>
+<%= button_to 'Voltar', store_path, method: :get, :class => "btn btn-info" %>
