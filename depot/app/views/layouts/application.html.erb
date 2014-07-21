@@ -10,9 +10,9 @@
 
       <!-- jquery plugin call. (main importance to function) -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"/>
-
+      
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+      
       <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
       <%= csrf_meta_tags %>
       
@@ -24,7 +24,7 @@
       <header class="top">
         <!-- cart -->
         <div class="right">
-          <%=link_to(image_tag("cart.png", :size => "75x75"), carts_path, :class => "cart") %>
+          <%=link_to(image_tag("cart.png", :size => "75x75"), cart_path(session[:cart_id]), :class => "cart") %>
         </div>
         <!-- main title -->      
         <h1 id="main-title"><%= @page_title || "boekenwinkel" %></h1>
@@ -39,7 +39,7 @@
 
                 <li><a href="/">Home</a></li>
                 <li><a href="#">News</a></li>
-                <li><a href="#">Products</a></li>
+                <li><a href="/products">Products</a></li>
                 <li><a href="#">Contact</a></li>
              </ul>
         </nav>
