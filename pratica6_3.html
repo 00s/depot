@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+function activateChecker(){
+	window.setInterval("validateForm()",1000);
+}
+
+	function validateForm() {
+		var response = "";
+   	var number	= document.forms["myForm"]["number"].value;	
+    var quote 	= document.forms["myForm"]["quote"].value;
+    var date 		= document.forms["myForm"]["date"].value;
+
+  	if(!checkNum(number)){ //		checks if first field is a number
+      	response +="First field must be a number.\n";
+    } if(!checkQuotes(quote)){ //  checks if second field is between quotes
+    		response +="Second field must be in quotes.\n";
+    } if(!checkDate(date)){
+    		response += "Third field must be a valid date.";
+    } if(response.length === 0){ // 	if it's empty, all tests have passed
+    		document.getElementById("bt_enviar").disabled = false;
+    }
+    document.getElementById("variavel").innerHTML=response;
+	}
+
+	function checkNum(num){
+    return (isNaN(num) == false && num.length != 0);
+	}
+	
+	function checkQuotes(quotation) {
+	    var i = quotation.length;
+	    var counter = 0;
+	    while (i--) {
+	       if (quotation[i] === '\"') {
+	          if(++counter === 2){
+	           return true;
+	          }
+	       }
+	    }
+	    return false;
+	}
+
+	function checkDate(date){
+		d = new Date(date);
+		if ( Object.prototype.toString.call(d) === "[object Date]" ) {
+  		// it is a date
+  		if ( isNaN( d.getTime() ) ) {  // d.valueOf() could also work
+    		return false; // date is not valid
+  		}	else {
+    		return true;
+  		}
+		}	
+		return false;
+	}
+	
+</script>
+	
+</head>
+<body onload="activateChecker();">
+
+<h1>task 2</h1>
+
+<form id="myForm" >
+	Insert a number:<br> <input type="text" id="number"><br>
+	Insert a quotation:<br> <input type="text" id="quote"><br>
+	Insert a date:<br> <input type="date" id="date"><br>
+<input type="submit" onclick="" value="Enviar" id="bt_enviar" disabled="true">
+</form>
+<br><p id="variavel"></p>
+</body>
+</html>
