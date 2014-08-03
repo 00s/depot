@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :line_items
+  
+  resources :line_items do
+    member do
+      patch :add
+      patch :remove
+    end
+  end
 
   resources :carts
 
