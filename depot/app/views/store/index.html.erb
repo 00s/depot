@@ -2,9 +2,6 @@
   <p id="notice" class="alert alert-danger"><%= notice %></p>
 <% end %>
 <div class="store">
-  <div id="cart">
-    <%= render @cart %>
-  </div>
   <% cache ['store', Product.latest] do %>
     <% @products.each do |product| %>
       <% cache ['entry', product] do %>
@@ -20,4 +17,7 @@
       <% end %>
     <% end %>
   <% end %>
+  <div id="cart">
+    <%= render @cart %>
+  </div>
 </div>

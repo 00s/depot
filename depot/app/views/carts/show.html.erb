@@ -1,37 +1,33 @@
-<div>
-	<% if notice %>
-		<p id="notice" class="alert alert-danger"><%= notice %></p>
-	<% end %>
-	
-</div>
+<% if notice %>
+<p id="notice" class="alert alert-danger"><%= notice %></p>
+<% end %>
 
-
-
-<div id="cart">
-	<h2>Your Cart</h2>
- 
+<h2>Your Cart</h2>
 <div class="container-fluid">
-<table  id="table" class="table table-bordered table-hover">
+  <table class="table table-hover">
   <thead>
-	  	<th>Title</th>
-	  	<th>Price</th>
-	  	<th>Quantity</th>
-	  	<th>Total</th>
-	  	<th>
-		  <%= button_to @cart, {remote: true, method: :delete, data: {message: 'Está certo que deseja esvaziar seu carrinho?' } , class: "btn btn-lg"} do %>
-		  <i class="glyphicon glyphicon-remove"></i>
-		  	<% end %>
-	  	</th>
-	</thead>
-			<%= render @cart.line_items %>
- 		<tr class="total_line">
-		<th id='total'>Total</th>
-		<th></th>
-		<th><%= @cart.total_quantity %></th>
-		<th></th>
-		<th class="total_cell"><%= number_to_currency(@cart.total_price) %></th>
-  </tr>
+<th>Title</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Total</th>
+<th>
+<%= button_to 'Empty Cart', @cart, method: :delete, data: { confirm: 'Está certo que deseja esvaziar seu carrinho?' } , class: "btn btn-danger" %>
+</th>
+</thead>
+    <% @cart.line_items.each do |item| %>
+			<tr>
+				<td><%= item.title %></td>	
+				<td><%= number_to_currency(item.price) %></td>
+				<td><%= item.quantity %></td>
+				<td class="item_price"><%= number_to_currency(item.total_price) %></td>
+				<td><%= button_to 'Remove', item, :class => "btn btn-warning", method: :delete %></td>
+			</tr>
+    <% end %>
+<tr class="total_line">
+<th colspan="1">Total</th>
+<th colspan="2"><%=@cart.total_quantity %></th>
+<th class="total_cell"><%= number_to_currency(@cart.total_price) %></th>
+<th colspan="1"></th>
+</tr>
   </table>
 </div>
-
-</div> 
