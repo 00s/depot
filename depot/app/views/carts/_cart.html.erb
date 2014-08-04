@@ -1,7 +1,7 @@
-	  <tr class="total_line">
-			<th>Total</th>
-			<th></th>
-			<th><%= cart.total_quantity %></th>
-			<th></th>
-			<th class="total_cell"><%= number_to_currency(@cart.total_price) %></th>
-	  </tr>
+<div id="partial_cart" class="alert alert-info" >
+	<p id='quantity'>
+	<span  class="glyphicon glyphicon-shopping-cart"></span>
+	<%= cart.total_quantity %> Books |
+	<span  class="glyphicon glyphicon-usd"></span>
+	<%= @cart.total_price %></p>
+</div>

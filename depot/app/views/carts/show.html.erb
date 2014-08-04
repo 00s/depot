@@ -18,13 +18,19 @@
 	  	<th>Quantity</th>
 	  	<th>Total</th>
 	  	<th>
-		  	<%= button_to @cart, {remote: true, method: :delete, data: {message: 'Está certo que deseja esvaziar seu carrinho?' } , class: "btn btn-lg"} do %>
-		  		<i class="glyphicon glyphicon-remove"></i>
+		  <%= button_to @cart, {remote: true, method: :delete, data: {message: 'Está certo que deseja esvaziar seu carrinho?' } , class: "btn btn-lg"} do %>
+		  <i class="glyphicon glyphicon-remove"></i>
 		  	<% end %>
 	  	</th>
-	  </thead>
+	</thead>
 			<%= render @cart.line_items %>
- 			<%= render @cart %>
+ 		<tr class="total_line">
+		<th id='total'>Total</th>
+		<th></th>
+		<th><%= @cart.total_quantity %></th>
+		<th></th>
+		<th class="total_cell"><%= number_to_currency(@cart.total_price) %></th>
+  </tr>
   </table>
 </div>
 
