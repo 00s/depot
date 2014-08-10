@@ -15,10 +15,6 @@ class ProductsControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
-    # tests if there are at least four links in the menu
-    assert_select '#dl-menu a', minimum: 4
-    # tests if there is a link to cart
-    assert_select '.right, link_to carts_path'
     # tests if there are at least 5 list-line-holder class elements (books) in the main area
     assert_select '.list-line-holder', minimum: 3
     # tests if there is a "title" to the products page and if its content is BOENKEN
