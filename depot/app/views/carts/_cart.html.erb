@@ -5,4 +5,7 @@
       There are <%= cart.total_quantity %> books in your cart.
     </a>
   </li>
+  <li>
+  	<%= button_to "Checkout", new_order_path, method: :get, class: "btn btn-success btn-xs ", id: "checkout-btn" %>
+  </li>
 </ul>

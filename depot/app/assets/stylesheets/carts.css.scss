@@ -10,3 +10,18 @@
 td, th, tr{
 	text-align: center;
 }
+.table th, td {   
+	vertical-align: center;
+	text-align: center;
+
+}
+
+.buttons button { 
+		display: inline;  
+		float: left;
+}
+
+#checkout-btn{
+	padding: 2px 5px;
+	margin: 10px 10px;
+}
