@@ -1,10 +1,11 @@
 <% if notice %>
-  <p id="notice" class="alert alert-danger"><%= notice %></p>
+  <div class="alert alert-warning alert-dismissible" role="alert" id="notice">
+    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+    <strong>Hey!</strong> <%= notice %>
+  </div>
 <% end %>
 <div class="store">
-  <div id="cart">
-    <%= render @cart %>
-  </div>
+  
   <% cache ['store', Product.latest] do %>
     <% @products.each do |product| %>
       <% cache ['entry', product] do %>

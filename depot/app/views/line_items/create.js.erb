@@ -1,1 +1,4 @@
+$('#cart').show('blind', 100);
+
 $('#cart').html("<%= escape_javascript render(@cart) %>");
+$('#cart ul li a').css({'color':'#88ff88'}).animate({'color':'#fff'}, 1500);

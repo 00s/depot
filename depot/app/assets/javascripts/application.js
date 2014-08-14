@@ -11,11 +11,9 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui/effect-blind
+//= require jquery_ujs
 //= require turbolinks
-//= require bootstrap/bootstrap.min
-//= require responsive_menu/modernizr.custom
-//= require responsive_menu/jquery.dlmenu
-//= require functions
 //= require_tree .
 
 

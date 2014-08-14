@@ -1,0 +1,9 @@
+<div class="list-line-holder">
+  <div class ="image-holder">
+    <%= link_to(image_tag(product.image_url, class: 'list_image'), product) %>
+  </div>
+  <div class="list-actions">
+    <%= button_to 'Edit', edit_product_path(product), :class => "btn btn-primary btn-xs"%>
+    <%= button_to 'Destroy', product, :class => "btn btn-danger btn-xs", method: :delete, :confirm => "Tem certeza que deseja excluir?" %>
+  </div>  
+</div>

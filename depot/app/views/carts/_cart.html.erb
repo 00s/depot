@@ -1,7 +1,8 @@
-<div id="partial_cart" class="alert alert-info" >
-	<p id='quantity'>
-	<span  class="glyphicon glyphicon-shopping-cart"></span>
-	<%= cart.total_quantity %> Books |
-	<span  class="glyphicon glyphicon-usd"></span>
-	<%= @cart.total_price %></p>
-</div>
+<ul class="nav navbar-nav navbar-right nav-pills nav-stacked">
+  <li class="active">
+    <a href="/carts/<%=session[:cart_id] %>">
+      <span class="badge pull-right"><%= number_to_currency(@cart.total_price) %> </span>
+      There are <%= cart.total_quantity %> books in your cart.
+    </a>
+  </li>
+</ul>
