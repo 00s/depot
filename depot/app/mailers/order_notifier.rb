@@ -1,25 +1,25 @@
 class OrderNotifier < ActionMailer::Base
-	default from: 'Sam Ruby <railsoutcast@gmail.com>'
+  default from:  'Depot Store <railsoutcast@gmail.com>'
 
-	# Subject can be set in your I18n file at config/locales/en.yml
-	# with the following lookup:
-	#
-	# => en.order_notifier.received.subject
-	#
-	def received
-		@greeting  = "Hi"
+  # Subject can be set in your I18n file at config/locales/en.yml
+  # with the following lookup:
+  #
+  #   en.order_notifier.received.subject
+  #
+  def received(order)
+    @order = order
 
-		mail to: "adf.melo@gmail.com"
-	end
+    mail to: order.email, subject: "Boekenwinkel Order Confirmation"
+  end
 
-	# Subject can be set in your I18n file at config/locales/en.yml
-	# with the following lookup:
-	#
-	# => en.order_notifier.shipped.subject
-	#
-	def shipped
-		@greeting = "Hi"
+  # Subject can be set in your I18n file at config/locales/en.yml
+  # with the following lookup:
+  #
+  #   en.order_notifier.shipped.subject
+  #
+  def shipped(order)
+    @order = order
 
-		mail to: "adf.melo@gmail.com"
-	end
+    mail to: order.email, subject: "Bokenwinkel Order Shipped"
+  end
 end
